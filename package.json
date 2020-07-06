@@ -22,7 +22,6 @@
     "node-app": "node ./built/node_app/index.js",
     "prebuild-app": "npm run-script --silent compile",
     "build-app": "node_modules/.bin/browserify built/app/index.js -o built/app/bundle.js",
-    "build": "node_modules/.bin/browserify built/index.js --standalone AppAuth -o built/bundle.js",
     "preminify": "npm run-script --silent build-app",
     "minify": "java -jar node_modules/google-closure-compiler/compiler.jar --js built/app/bundle.js --js_output_file built/app/bundle_minified.js",
     "precompile": "npm run-script --silent clean && npm run-script --silent format",
