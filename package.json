@@ -27,7 +27,7 @@
     "minify": "java -jar node_modules/google-closure-compiler/compiler.jar --js built/app/bundle.js --js_output_file built/app/bundle_minified.js",
     "precompile": "npm run-script --silent clean && npm run-script --silent format",
     "compile": "node_modules/.bin/tsc",
-    "prepare": "npm run-script --silent build-app",
+    "prepare": "npm run-script --silent build",
     "format": "node_modules/.bin/clang-format -i -style=file --glob=src/**.ts",
     "clean": "rm -rf built",
     "pretest": "npm run-script --silent compile",
