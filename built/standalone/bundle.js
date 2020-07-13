@@ -464,7 +464,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.IS_PROFILE = exports.IS_LOG = void 0;
 /* Global flags that control the behavior of App Auth JS. */
 /* Logging turned on ? */
-exports.IS_LOG = false;
+exports.IS_LOG = true;
 /* Profiling turned on ? */
 exports.IS_PROFILE = false;
 
