@@ -752,7 +752,7 @@ var RedirectRequestHandler = /** @class */ (function (_super) {
                     .then(function (request) {
                     // check redirect_uri and state
                     var currentUri = "" + _this.locationLike.origin + _this.locationLike.pathname;
-                    var queryParams = _this.utils.parse(_this.locationLike, false /* use search */);
+                    var queryParams = _this.utils.parse(_this.locationLike, true /* use hash */);
                     var state = queryParams['state'];
                     var code = queryParams['code'];
                     var error = queryParams['error'];
