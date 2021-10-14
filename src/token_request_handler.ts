@@ -71,7 +71,8 @@ export class BaseTokenRequestHandler implements TokenRequestHandler {
       method: 'POST',
       dataType: 'json',  // adding implicit dataType
       headers: {'Content-Type': 'application/x-www-form-urlencoded'},
-      data: this.utils.stringify(request.toStringMap())
+      data: this.utils.stringify(request.toStringMap()),
+      xhrFields: {withCredentials: true}
     });
 
     return tokenResponse.then(response => {
