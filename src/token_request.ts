@@ -40,7 +40,7 @@ export class TokenRequest {
   grantType: string;
   code: string|undefined;
   refreshToken: string|undefined;
-  extras: StringMap|undefined
+  extras: StringMap|undefined;
 
   constructor(request: TokenRequestJson) {
     this.clientId = request.client_id;

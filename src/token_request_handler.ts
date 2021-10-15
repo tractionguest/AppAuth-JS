@@ -28,7 +28,7 @@ export interface TokenRequestHandler {
   /**
    * Performs the token request, given the service configuration.
    */
-  performTokenRequest(configuration: AuthorizationServiceConfiguration, request: TokenRequest):
+  performTokenRequest(configuration: AuthorizationServiceConfiguration, request: TokenRequest, xhrSettings?: JQueryAjaxSettings):
       Promise<TokenResponse>;
 
   performRevokeTokenRequest(
@@ -64,15 +64,15 @@ export class BaseTokenRequestHandler implements TokenRequestHandler {
     });
   }
 
-  performTokenRequest(configuration: AuthorizationServiceConfiguration, request: TokenRequest):
+  performTokenRequest(configuration: AuthorizationServiceConfiguration, request: TokenRequest, xhrSettings?: JQueryAjaxSettings):
       Promise<TokenResponse> {
-    let tokenResponse = this.requestor.xhr<TokenResponseJson|TokenErrorJson>({
+    let tokenResponse = this.requestor.xhr<TokenResponseJson|TokenErrorJson>({      
       url: configuration.tokenEndpoint,
       method: 'POST',
       dataType: 'json',  // adding implicit dataType
       headers: {'Content-Type': 'application/x-www-form-urlencoded'},
       data: this.utils.stringify(request.toStringMap()),
-      xhrFields: {withCredentials: true}
+      ...xhrSettings    
     });
 
     return tokenResponse.then(response => {
