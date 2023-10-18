@@ -1,6 +1,6 @@
 {
   "name": "@openid/appauth",
-  "version": "1.2.7",
+  "version": "1.4.0",
   "description": "A general purpose OAuth client.",
   "author": "The OpenID Foundation",
   "license": "Apache-2.0",
@@ -44,30 +44,28 @@
     "Node"
   ],
   "devDependencies": {
-    "@types/hapi": "^18.0.3",
-    "@types/jasmine": "^3.5.9",
-    "@types/node": "^13.9.0",
+    "@types/hapi": "^18.0.5",
+    "@types/jasmine": "^3.6.9",
+    "@types/node": "^14.14.41",
     "@types/opener": "^1.4.0",
-    "@types/react": "^16.9.23",
-    "@types/react-dom": "^16.9.5",
-    "browserify": "^16.5.0",
-    "clang-format": "^1.4.0",
-    "google-closure-compiler": "^20200224.0.0",
-    "http-server": "^0.12.1",
-    "jasmine-core": "^3.5.0",
-    "karma": "^4.4.1",
-    "karma-browserify": "^7.0.0",
+    "browserify": "^17.0.0",
+    "clang-format": "^1.5.0",
+    "google-closure-compiler": "^20210406.0.0",
+    "http-server": "^0.12.3",
+    "jasmine-core": "^3.7.1",
+    "karma": "^6.3.2",
+    "karma-browserify": "^8.0.0",
     "karma-chrome-launcher": "^3.1.0",
-    "karma-jasmine": "^3.1.1",
-    "typescript": "^3.8.3",
-    "watchify": "^3.11.1"
+    "karma-jasmine": "^4.0.1",
+    "typescript": "^4.2.4",
+    "watchify": "^4.0.0"
   },
   "dependencies": {
-    "@types/base64-js": "^1.2.5",
-    "@types/jquery": "^3.3.33",
-    "base64-js": "^1.3.1",
-    "follow-redirects": "^1.10.0",
-    "form-data": "^3.0.0",
-    "opener": "^1.5.1"
+    "@types/base64-js": "^1.3.0",
+    "@types/jquery": "^3.5.5",
+    "base64-js": "^1.5.1",
+    "follow-redirects": "^1.15.3",
+    "form-data": "^4.0.0",
+    "opener": "^1.5.2"
   }
 }

@@ -1,3 +1,4 @@
+/// <reference types="jquery" />
 import { AuthorizationServiceConfiguration } from './authorization_service_configuration';
 import { QueryStringUtils } from './query_string_utils';
 import { RevokeTokenRequest } from './revoke_token_request';
@@ -11,7 +12,7 @@ export interface TokenRequestHandler {
     /**
      * Performs the token request, given the service configuration.
      */
-    performTokenRequest(configuration: AuthorizationServiceConfiguration, request: TokenRequest): Promise<TokenResponse>;
+    performTokenRequest(configuration: AuthorizationServiceConfiguration, request: TokenRequest, xhrSettings?: JQueryAjaxSettings): Promise<TokenResponse>;
     performRevokeTokenRequest(configuration: AuthorizationServiceConfiguration, request: RevokeTokenRequest): Promise<boolean>;
 }
 /**
@@ -23,5 +24,5 @@ export declare class BaseTokenRequestHandler implements TokenRequestHandler {
     constructor(requestor?: Requestor, utils?: QueryStringUtils);
     private isTokenResponse;
     performRevokeTokenRequest(configuration: AuthorizationServiceConfiguration, request: RevokeTokenRequest): Promise<boolean>;
-    performTokenRequest(configuration: AuthorizationServiceConfiguration, request: TokenRequest): Promise<TokenResponse>;
+    performTokenRequest(configuration: AuthorizationServiceConfiguration, request: TokenRequest, xhrSettings?: JQueryAjaxSettings): Promise<TokenResponse>;
 }
